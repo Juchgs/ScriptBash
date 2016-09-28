@@ -1,0 +1,28 @@
+#!/bin/bash
+echo Diretório = $1
+echo  Nome do Aluno = $2
+echo   Matricula = $3
+echo  Ano = $4
+
+cd $1
+mkdir $2$3
+cd $2$3
+
+1ano=$4
+2ano=$(($4 + 1))
+3ano=$(($4 + 2))
+
+for i in $1ano $2ano  $3ano
+{
+	mkdir $i/;
+	cd $i;
+	mkdir Filosofia/ 
+	mkdir Ingles/
+	mkdir Matematica/
+	mkdir Programação/
+	mkdir Quimica/
+	cd ../
+}
+
+
+ 
